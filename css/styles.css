@@ -21,14 +21,17 @@ body {
 }
 
 .container {
-    width: 60%;
+    width: 550px;
     background-color: hsl(0, 0%, 100%);
     border-radius: 20px;
     padding: 30px;
 
     position: fixed;
-    top: 20vh;
-    left: 20vh;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    box-shadow: 1px 1px 10px #000;
 }
 
 .container__header {
@@ -50,6 +53,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     font-size: 1.2em;
 
     padding: 10px 0;
@@ -62,4 +66,36 @@ body {
 
 .activo {
     display: block;
+}
+
+@media screen and (max-width: 375px) {
+    .topBody {
+        height: 35vh;
+        background-image: url("../assets/background-pattern-mobile.svg");
+    }
+
+    .container {
+        width: 300px;
+    }
+
+    .container__header_icon {
+        width: 25px;
+    }
+
+    .container__header_title {
+        font-size: 3em;
+    }
+
+    .icon_question {
+        width: 20px;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    .contenido {
+        font-size: 1.2em;
+    }
+
 }
